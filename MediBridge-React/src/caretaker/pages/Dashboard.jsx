@@ -17,7 +17,7 @@ export default function Dashboard({ caretakerProfile, seniorProfile }) {
       <div className={"flex flex-col w-full gap-space-lg"}>
 
 <div className={"relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm"}>
-<div className={"relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md"}>
+<div className={"relative z-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-md"}>
 <div className={"flex flex-col gap-space-xs"}>
 <div className={"flex items-center gap-space-xs"}>
 <span className={"inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"}>
@@ -32,7 +32,7 @@ export default function Dashboard({ caretakerProfile, seniorProfile }) {
         </p>
 </div>
 
-<div className={"flex flex-wrap items-center gap-space-sm pt-space-xs lg:pt-0"}>
+<div className={"flex flex-wrap items-center gap-space-sm pt-space-xs lg:ml-auto lg:pt-0"}>
 <button className={"min-h-[48px] px-space-md rounded-xl bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-surface-container hover:shadow-sm transition-all flex items-center gap-space-xs"} id={"nudge-btn"} data-action={"triggerSeniorNudge()"}>
 <span className={"material-symbols-outlined text-[20px] text-secondary"}>notifications_active</span>
 <span className={""}>Send Reminder Ping</span>
@@ -44,21 +44,21 @@ export default function Dashboard({ caretakerProfile, seniorProfile }) {
 </div>
 </div>
 
-<div className={"mt-space-lg pt-space-md flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low/70 rounded-xl p-space-md"}>
-<div className={"flex items-center gap-space-md"}>
+<div className={"mt-space-lg grid grid-cols-1 gap-space-md lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.5fr)]"}>
+<div className={"flex min-w-0 items-center gap-space-md rounded-xl border border-surface-container bg-surface-container-low p-space-md"}>
 <div className={"relative"}>
-<div className={"w-14 h-14 rounded-full bg-surface-variant flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold shadow-inner"}>
+<div className={"w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-primary font-headline-sm text-headline-sm font-bold"}>
             {seniorInitials}
           </div>
-<span className={"absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim ring-2 ring-surface-container-lowest"}></span>
+<span className={"absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim ring-2 ring-surface-container-low"}></span>
 </div>
-<div className={"flex flex-col"}>
-<div className={"flex items-center gap-space-xs"}>
-<span className={"font-headline-sm text-headline-sm text-on-surface font-semibold"}>{seniorName}</span>
+<div className={"flex min-w-0 flex-col gap-1"}>
+<div className={"flex min-w-0 flex-wrap items-center gap-space-xs"}>
+<span className={"break-words font-headline-sm text-headline-sm text-on-surface font-semibold"}>{seniorName}</span>
+<span className={"rounded-full bg-white px-2 py-1 font-label-sm text-label-sm text-secondary"}>{seniorProfile.name ? "Linked" : "Not linked"}</span>
 </div>
-<div className={"flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"}>
-<span className={""}>ID: <strong className={"font-label-sm text-label-sm text-on-surface font-semibold"}>{seniorProfile.linkingCode || "Not linked"}</strong></span>
-<span className={""}>•</span>
+<div className={"flex flex-wrap items-center gap-x-space-sm gap-y-1 text-on-surface-variant font-body-sm text-body-sm"}>
+<span>ID: <strong className={"font-label-sm text-label-sm text-on-surface font-semibold"}>{seniorProfile.linkingCode || "Not linked"}</strong></span>
 <span className={"flex items-center gap-1 text-secondary font-medium"}>
 <span className={"material-symbols-outlined text-[16px]"}>sensors</span>
               Dispenser Synced
@@ -67,22 +67,22 @@ export default function Dashboard({ caretakerProfile, seniorProfile }) {
 </div>
 </div>
 
-<div className={"flex flex-wrap items-center gap-space-md"}>
-<div className={"flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container-lowest shadow-sm"}>
+<div className={"grid grid-cols-1 gap-space-sm sm:grid-cols-3"}>
+<div className={"flex min-w-0 items-center gap-space-sm rounded-xl border border-surface-container bg-surface-container-lowest px-space-sm py-space-md"}>
 <span className={"material-symbols-outlined text-secondary text-[20px]"}>battery_charging_90</span>
 <div className={"flex flex-col"}>
 <span className={"font-label-sm text-label-sm text-on-surface-variant leading-none"}>Smart Hub</span>
 <span className={"font-label-md text-label-md text-on-surface leading-tight font-bold"}>92% • Online</span>
 </div>
 </div>
-<div className={"flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container-lowest shadow-sm"}>
+<div className={"flex min-w-0 items-center gap-space-sm rounded-xl border border-surface-container bg-surface-container-lowest px-space-sm py-space-md"}>
 <span className={"material-symbols-outlined text-primary text-[20px]"}>ecg_heart</span>
 <div className={"flex flex-col"}>
 <span className={"font-label-sm text-label-sm text-on-surface-variant leading-none"}>Resting Pulse</span>
 <span className={"font-label-md text-label-md text-on-surface leading-tight font-bold"}>71 bpm</span>
 </div>
 </div>
-<div className={"flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container-lowest shadow-sm"}>
+<div className={"flex min-w-0 items-center gap-space-sm rounded-xl border border-surface-container bg-surface-container-lowest px-space-sm py-space-md"}>
 <span className={"material-symbols-outlined text-secondary text-[20px]"}>verified</span>
 <div className={"flex flex-col"}>
 <span className={"font-label-sm text-label-sm text-on-surface-variant leading-none"}>Daily Adherence</span>

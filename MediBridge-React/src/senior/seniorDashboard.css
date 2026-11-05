@@ -100,6 +100,32 @@
   max-width: 100%;
 }
 
+#senior-screen-content [class*="bg-[#"] {
+  background-color: #eaf3fc !important;
+}
+
+#senior-screen-content [class*="bg-[#FFFFFF"] {
+  background-color: #ffffff !important;
+}
+
+#senior-screen-content [class*="text-[#"],
+#senior-screen-content [class~="text-white"] {
+  color: #355776 !important;
+}
+
+#senior-screen-content [class*="border-[#"] {
+  border-color: #c6dcf2 !important;
+}
+
+#senior-screen-content [class*="bg-gradient"] {
+  background-image: none !important;
+  background-color: #eaf3fc !important;
+}
+
+#senior-screen-content svg [stroke]:not([stroke="none"]) {
+  stroke: #b7d0e9 !important;
+}
+
 @media (min-width: 700px) {
   .senior-dashboard #senior-screen-content > header > div {
     max-width: 900px;

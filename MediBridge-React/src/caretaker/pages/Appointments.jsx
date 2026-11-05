@@ -47,9 +47,9 @@ export default function Appointments({ seniorProfile }) {
 </button>
 </div>
 
-<div className={"flex items-center justify-between border-b-0 pb-space-sm mb-space-lg"}>
-<div className={"inline-flex p-1.5 rounded-2xl bg-surface-container-low gap-1 shadow-sm"} role={"tablist"}>
-<button className={"px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-primary bg-primary-container shadow-sm flex items-center gap-space-xs transition-all"} id={"tab-upcoming"} data-action={"switchTab('upcoming')"}>
+<div className={"mb-space-lg flex flex-col items-start gap-space-md border-b-0 pb-space-sm xl:flex-row xl:items-center xl:justify-between"}>
+<div className={"inline-flex flex-wrap gap-1 rounded-2xl bg-surface-container-low p-1.5 shadow-sm"} role={"tablist"}>
+<button className={"px-space-md py-2.5 rounded-xl bg-surface-container font-label-md text-label-md text-primary shadow-sm flex items-center gap-space-xs transition-all"} id={"tab-upcoming"} data-action={"switchTab('upcoming')"}>
 <span className={"material-symbols-outlined text-[18px]"}>event_available</span>
 <span>Upcoming Appointments</span>
 <span className={"ml-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"}>2</span>
@@ -65,10 +65,11 @@ export default function Appointments({ seniorProfile }) {
 </button>
 </div>
 
-<div className={"hidden xl:flex items-center gap-space-md px-space-md py-2 rounded-2xl bg-surface-container-lowest shadow-sm"}>
+<div className={"flex flex-wrap items-center gap-space-md rounded-2xl bg-surface-container-lowest px-space-md py-2 shadow-sm"}>
 <div className={"flex items-center gap-2"}>
 <span className={"material-symbols-outlined text-secondary text-[20px]"}>directions_car</span>
-<span className={"font-body-sm text-body-sm text-on-surface-variant"}>Rides Secured: <strong className={"text-on-surface"}>2 of 2</strong></span>
+<span className={"font-body-sm text-body-sm text-on-surface-variant"}>Rides Secured</span>
+<strong className={"rounded-full bg-surface-container px-2.5 py-1 font-label-md text-label-md text-primary"}>2 of 2</strong>
 </div>
 <div className={"w-1 h-4 rounded-full bg-surface-container-high"}></div>
 <div className={"flex items-center gap-2"}>
