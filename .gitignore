@@ -2,6 +2,9 @@
 **/dist/
 *.log
 npm-debug.log*
+<<<<<<< HEAD
 .env
 __pycache__/
 *.py[cod]
+=======
+>>>>>>> e1e2d92 (The half of the backendis done)
