@@ -1,0 +1,415 @@
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-11 h-11 rounded-xl bg-[#173B67] flex items-center justify-center text-white shrink-0 shadow-sm"><span class="material-symbols-outlined text-[26px]">health_and_safety</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight truncate">MediBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">•</span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Medicines</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Connected Health Support</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E6F7F5] border border-[#99F6E4] text-[#0D9488]"><span class="w-2 h-2 rounded-full bg-[#0D9488] animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold">Caregiver Synced</span></div><div class="w-8 h-8 rounded-full bg-[#173B67] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Form Screen Container -->
+<div class="w-full max-w-2xl mx-auto px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<!-- Top Action & Navigation Bar -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between min-h-[48px]"><button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-[#CBDBF5] text-[#173B67] font-label-md hover:bg-[#F1F5FB] transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="">Back to Schedule</span>
+</button>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E6F7F5] border border-[#99F6E4] text-[#0D9488]">
+<span class="w-2 h-2 rounded-full bg-[#0D9488]"></span>
+<span class="font-label-sm text-label-sm font-semibold">Draft auto-saved 1m ago</span>
+</div></div>
+<div class="flex items-start justify-between gap-space-sm mt-1">
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">Add New Medicine</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Enter details to establish safe scheduling and caregiver tracking.</p>
+</div>
+<!-- Seniors Accessibility Audio Prompt -->
+<button aria-label="Listen to Instructions aloud" class="shrink-0 p-3 rounded-2xl bg-[#E8EEF8] border border-[#CBDBF5] text-[#173B67] shadow-sm hover:bg-[#173B67] hover:text-white transition-all flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[56px]" type="button">
+<span class="material-symbols-outlined text-[26px]">volume_up</span>
+<span class="font-label-sm text-[11px] leading-tight font-semibold">Listen</span>
+</button>
+</div>
+</div>
+<!-- MAIN FORM BODY -->
+<form class="flex flex-col gap-space-md">
+<!-- SECTION 1: BASIC MEDICINE DETAILS -->
+<section class="rounded-2xl bg-surface-container-lowest p-5 sm:p-6 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm pb-1">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">pill</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">1. Basic Medicine Details</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Identification and physical appearance</p>
+</div>
+</div>
+<!-- Medicine Name Input with Voice Dictation -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="medicine-name">
+<span class="">Medicine Name <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Verified Brand List
+            </span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 pl-4 pr-14 rounded-xl bg-surface-container-low text-on-surface text-body-lg font-body-lg placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="medicine-name" placeholder="e.g., Amlodipine, Lisinopril, Metformin" type="text" value="Amlodipine Besylate">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">pill</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Generic or commercial name found on the container label.</p>
+</div>
+<!-- Medicine Type Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Form Factor / Type <span class="text-error font-bold">*</span></label>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-2"><button class="flex flex-col items-center justify-center p-3 min-h-[58px] rounded-xl bg-[#173B67] text-white shadow-sm gap-1 transition-all border border-[#173B67]" type="button">
+<span class="material-symbols-outlined text-[24px]">switch_account</span>
+<span class="font-label-sm text-label-sm font-semibold">Tablet</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 min-h-[58px] rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] text-[#173B67]">medication_liquid</span>
+<span class="font-label-sm text-label-sm">Capsule</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 min-h-[58px] rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] text-[#173B67]">fluid_med</span>
+<span class="font-label-sm text-label-sm">Syrup</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 min-h-[58px] rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] text-[#173B67]">syringe</span>
+<span class="font-label-sm text-label-sm">Injection</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 min-h-[58px] rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] text-[#173B67]">opacity</span>
+<span class="font-label-sm text-label-sm">Drops</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 min-h-[58px] rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] text-[#173B67]">more_horiz</span>
+<span class="font-label-sm text-label-sm">Other</span>
+</button></div>
+</div>
+<!-- Dosage & Unit Section -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Strength / Dosage Amount <span class="text-error font-bold">*</span></label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex items-center h-14 bg-surface-container-low rounded-xl px-3 focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary transition-all">
+<input class="w-full bg-transparent text-body-lg font-body-lg text-on-surface focus:outline-none" placeholder="Dosage value" type="text" value="5">
+<span class="font-label-md text-label-md text-on-surface-variant pr-1">mg</span>
+</div>
+<!-- Preset Quick Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1">
+<button class="h-11 px-3.5 rounded-xl bg-surface-container-high text-primary font-label-md text-label-md shrink-0" type="button">5 mg</button>
+<button class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0" type="button">10 mg</button>
+<button class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0" type="button">20 mg</button>
+<button class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md shrink-0" type="button">500 mg</button>
+</div>
+</div>
+</div>
+<!-- Medicine Visual Description -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="medicine-desc">Visual Appearance &amp; Marking <span class="text-outline font-normal">(Optional)</span></label>
+<textarea class="w-full p-3.5 rounded-xl bg-surface-container-low text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="medicine-desc" placeholder="e.g., Small white round tablet marked 'NORVASC 5' on one side" rows="2">Small white circular tablet with scoring line, stamped with '5'.</textarea>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Helps verify you have taken the correct pill from your organizer.</span>
+</div>
+</section>
+<!-- SECTION 2: SCHEDULE & FREQUENCY -->
+<section class="rounded-2xl bg-surface-container-lowest p-5 sm:p-6 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm pb-1">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">alarm</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">2. Schedule &amp; Frequency</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Set routine alerts matched with your day</p>
+</div>
+</div>
+<!-- Frequency Chips -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-on-surface">Frequency <span class="text-error font-bold">*</span></label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2"><button class="min-h-[50px] px-3.5 py-2.5 rounded-xl bg-[#173B67] text-white font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm border border-[#173B67]" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+<span class="">Once daily</span>
+</button>
+<button class="min-h-[50px] px-3.5 py-2.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] font-label-md text-label-md flex items-center justify-center" type="button">
+Twice daily
+</button>
+<button class="min-h-[50px] px-3.5 py-2.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] font-label-md text-label-md flex items-center justify-center" type="button">
+Three times daily
+</button>
+<button class="min-h-[50px] px-3.5 py-2.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] font-label-md text-label-md flex items-center justify-center" type="button">
+Four times daily
+</button>
+<button class="col-span-2 sm:col-span-2 min-h-[50px] px-3.5 py-2.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] font-label-md text-label-md flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px] text-[#173B67]">calendar_month</span>
+<span class="">Custom days or intervals</span>
+</button></div>
+</div>
+<!-- Specific Time Slots -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">Select Routine Alarm Time <span class="text-error font-bold">*</span></label>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">1 slot selected</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5"><!-- Morning (Active) -->
+<div class="p-3.5 rounded-xl bg-[#F0F5FD] border-2 border-[#173B67] flex items-center justify-between min-h-[56px] transition-all shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-[#173B67] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">wb_twilight</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-[#173B67] block font-bold">Morning Routine</span>
+<span class="font-body-sm text-body-sm text-[#0D9488] font-semibold">08:00 AM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#0D9488] text-[26px]">check_circle</span>
+</div>
+<!-- Afternoon -->
+<div class="p-3.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] flex items-center justify-between min-h-[56px] opacity-75 hover:opacity-100 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-[#EBF1FA] text-[#475569] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-[#0F172A] block">Afternoon</span>
+<span class="font-body-sm text-body-sm text-[#475569]">01:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#94A3B8] text-[24px]">radio_button_unchecked</span>
+</div>
+<!-- Evening -->
+<div class="p-3.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] flex items-center justify-between min-h-[56px] opacity-75 hover:opacity-100 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-[#EBF1FA] text-[#475569] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">nightlight</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-[#0F172A] block">Evening Dinner</span>
+<span class="font-body-sm text-body-sm text-[#475569]">06:30 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#94A3B8] text-[24px]">radio_button_unchecked</span>
+</div>
+<!-- Bedtime -->
+<div class="p-3.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] flex items-center justify-between min-h-[56px] opacity-75 hover:opacity-100 transition-all">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-[#EBF1FA] text-[#475569] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">bedtime</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-[#0F172A] block">Bedtime</span>
+<span class="font-body-sm text-body-sm text-[#475569]">09:00 PM</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#94A3B8] text-[24px]">radio_button_unchecked</span>
+</div></div>
+<button class="mt-1 w-full min-h-[48px] rounded-xl bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">+ Add Specific Custom Time</span>
+</button>
+</div>
+<!-- Date Range & Ongoing Toggle -->
+<div class="flex flex-col gap-3 pt-1">
+<div class="flex flex-col sm:flex-row gap-3">
+<div class="flex-1 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Start Date</label>
+<div class="flex items-center h-14 bg-surface-container-low rounded-xl px-3.5 gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Today (Oct 24, 2024)</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Course Duration</label>
+<div class="flex items-center justify-between h-14 bg-surface-container-low rounded-xl px-3.5">
+<span class="font-body-md text-body-md text-on-surface">Ongoing Medication</span>
+<div class="w-12 h-7 rounded-full bg-primary flex items-center p-1 cursor-pointer">
+<div class="w-5 h-5 rounded-full bg-on-primary translate-x-5 transition-transform"></div>
+</div>
+</div>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span> Continuous long-term prescription (no end date required).
+          </span>
+</div>
+<!-- Meal Instructions -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-label-lg text-label-lg text-on-surface">Food &amp; Meal Condition <span class="text-error font-bold">*</span></label>
+<div class="grid grid-cols-2 gap-2"><button class="min-h-[52px] p-3 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] flex items-center gap-2.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[#173B67] text-[22px]">restaurant</span>
+<span class="font-label-md text-label-md">Before food</span>
+</button>
+<button class="min-h-[52px] p-3 rounded-xl bg-[#0D9488] text-white shadow-sm flex items-center gap-2.5 transition-all border border-[#0D9488]" type="button">
+<span class="material-symbols-outlined text-white text-[22px]">lunch_dining</span>
+<span class="font-label-md text-label-md font-bold">With food (Selected)</span>
+</button>
+<button class="min-h-[52px] p-3 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] flex items-center gap-2.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[#173B67] text-[22px]">timer</span>
+<span class="font-label-md text-label-md">After food</span>
+</button>
+<button class="min-h-[52px] p-3 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#0F172A] hover:bg-[#EBF1FA] flex items-center gap-2.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[#173B67] text-[22px]">check_box_outline_blank</span>
+<span class="font-label-md text-label-md">No instructions</span>
+</button></div>
+</div>
+<!-- Additional Instructions -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="prep-instructions">Special Guidance</label>
+<input class="w-full h-14 px-4 rounded-xl bg-surface-container-low text-on-surface text-body-md font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="prep-instructions" type="text" value="Take with a full glass of water. Do not crush.">
+</div>
+</section>
+<!-- SECTION 3: STOCK INFORMATION -->
+<section class="rounded-2xl bg-surface-container-lowest p-5 sm:p-6 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm pb-1">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">3. Stock &amp; Refill Tracking</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prevent missed doses with automated count alerts</p>
+</div>
+</div>
+<!-- Refill Service Connected Badge -->
+<div class="p-3.5 rounded-xl bg-[#E6F7F5] border border-[#99F6E4] text-[#0D9488] flex items-center gap-3 shadow-sm">
+<span class="material-symbols-outlined text-[#0D9488] text-[24px]">local_pharmacy</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-[#0D9488]">Walgreens Hub &amp; Smart Refill Synced</span>
+<span class="font-body-sm text-body-sm text-[#115E59]">Your pharmacy will automatically be notified when supply falls under 7 days.</span>
+</div>
+</div>
+<!-- Quantity Stepper Controls -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Total Purchased -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Total Pack Quantity</label>
+<div class="flex items-center justify-between h-14 bg-surface-container-low rounded-xl px-2">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">60</span>
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+</div>
+</div>
+<!-- Current Remaining -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface">Current Remaining</label>
+<div class="flex items-center justify-between h-14 bg-surface-container-low rounded-xl px-2">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">60</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tablets</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert Threshold -->
+<div class="flex flex-col gap-2 p-3.5 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5]">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-[#0F172A] font-semibold">Low-Supply Warning Trigger</span>
+<span class="font-label-md text-label-md text-[#0D9488] font-bold">7 days remaining (7 tablets)</span>
+</div>
+<div class="w-full bg-[#E2EAF8] h-3 rounded-full overflow-hidden">
+<div class="bg-[#0D9488] h-full rounded-full w-1/4"></div>
+</div>
+<span class="font-body-sm text-body-sm text-[#475569]">You will get a reminder ping when 7 days of medication remain.</span>
+</div>
+</section>
+<!-- SECTION 4: PRESCRIPTION & DOCTOR (OPTIONAL) -->
+<section class="rounded-2xl bg-surface-container-lowest p-5 sm:p-6 shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm pb-1">
+<div class="w-10 h-10 rounded-xl bg-[#E8EEF8] border border-[#CBDBF5] flex items-center justify-center text-[#173B67] shrink-0">
+<span class="material-symbols-outlined text-[22px]">document_scanner</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">4. Prescription &amp; Doctor <span class="font-normal text-outline text-label-md">(Optional)</span></h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Keep official medical documents on record</p>
+</div>
+</div>
+<!-- Prescription Upload Area -->
+<div class="p-4 rounded-2xl bg-[#F8F9FF] border-2 border-dashed border-[#CBDBF5] hover:border-[#173B67] flex flex-col items-center justify-center text-center gap-2 cursor-pointer hover:bg-[#F0F5FD] transition-colors min-h-[140px]">
+<div class="w-12 h-12 rounded-full bg-[#E8EEF8] text-[#173B67] flex items-center justify-center border border-[#CBDBF5]">
+<span class="material-symbols-outlined text-[26px]">photo_camera</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-[#173B67] font-bold">Tap to snap photo or upload prescription</span>
+<span class="font-body-sm text-body-sm text-[#475569]">Supports camera capture, PDF, JPG, or PNG</span>
+</div>
+</div>
+<!-- Uploaded Receipt Thumbnail Card -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a clean doctor prescription document showing pharmacy label and dosage instructions for hypertension tablets in soft clinical lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo5kprZ1E6rDswmx-XQeblTOpdQ6gmVZO7LU2ph1AWAyBzX1exx2vzpLMkOiExFQGfd1E690oVepqMWHt7BzpTwlBaU4CjJLy5OjzzSk3MBmVQCrUgIQma-Gj0KWrKFlaCYJe-n8kuCW3LRngwPT0FiLyJ8BIOzVZVAiEoAzX1CuuUXAK6x2y6_73fschDqtOi6PtcxlRJZ5zfqxS952WK-70zYdYvmYsfEdH2CGZD">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Rx_Amlodipine_DrChen.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.4 MB • Scanned today</span>
+</div>
+</div>
+<button aria-label="Remove scanned document" class="p-2 text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Prescribing Doctor & Rx Reference -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="doctor-name">Prescribing Physician</label>
+<input class="w-full h-14 px-4 rounded-xl bg-surface-container-low text-on-surface text-body-md font-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="doctor-name" type="text" value="Dr. Robert Chen, MD (Cardiology)">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="rx-number">Prescription Rx Number</label>
+<input class="w-full h-14 px-4 rounded-xl bg-surface-container-low text-on-surface text-body-md font-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="rx-number" type="text" value="Rx #849201-B • Refills allowed: 3">
+</div>
+</div>
+</section>
+<!-- SECTION 5: LIVE REVIEW SUMMARY -->
+
+<!-- SECTION 6: ACTIONS & CLINICAL SAFEGUARD -->
+<section class="flex flex-col gap-space-sm pt-2 pb-6">
+<!-- Main CTA -->
+<button class="w-full min-h-[56px] rounded-2xl bg-[#173B67] text-white font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md hover:bg-[#112D50] active:scale-[0.99] transition-all border border-[#173B67]" type="button">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+<span class="">Save &amp; Sync to Schedule</span>
+</button>
+<!-- Secondary Discard -->
+<button class="w-full min-h-[50px] rounded-2xl bg-white border border-[#CBDBF5] text-[#475569] hover:text-[#0F172A] hover:bg-[#F8F9FF] font-label-lg text-label-lg transition-colors shadow-sm" type="button">
+Discard Draft
+</button>
+<!-- Safety Assurance Card -->
+<div class="p-4 rounded-2xl bg-white border border-[#CBDBF5] text-[#475569] flex items-start gap-3 mt-1 shadow-sm">
+<span class="material-symbols-outlined text-[#0D9488] text-[22px] shrink-0 mt-0.5">security</span>
+<p class="font-body-sm text-body-sm"><strong class="text-[#173B67] font-semibold">Clinical Safeguard:</strong> This addition will automatically reflect in your daily reminder list and notify verified healthcare provider <span class="text-[#0F172A] font-semibold">Sarah Vance</span> for safety review.</p>
+</div>
+</section>
+</form>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-label-md"><div class="h-20 px-space-xs grid items-center justify-items-center grid-cols-6 bg-white/95 border-t border-[#CBDBF5] backdrop-blur-xl">
+<a class="flex flex-col items-center justify-center w-full h-full min-h-[48px] text-[#475569] hover:text-[#173B67] transition-colors gap-1" data-path="home" href="#">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="font-label-sm text-[11px] leading-tight font-medium">Home</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center w-full h-full min-h-[48px] transition-colors text-[#173B67] bg-[#EBF1FA] rounded-xl gap-1" data-path="medicines" href="#">
+<span class="material-symbols-outlined text-[22px]">medication</span>
+<span class="font-label-sm text-[11px] leading-tight font-bold">Meds</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full min-h-[48px] text-[#475569] hover:text-[#173B67] transition-colors gap-1" data-path="care-circle" href="#">
+<span class="material-symbols-outlined text-[22px]">group</span>
+<span class="font-label-sm text-[11px] leading-tight font-medium text-center truncate px-0.5">Care Circle</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full min-h-[48px] text-[#475569] hover:text-[#173B67] transition-colors gap-1" data-path="visits" href="#">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+<span class="font-label-sm text-[11px] leading-tight font-medium">Visits</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full min-h-[48px] text-[#475569] hover:text-[#173B67] transition-colors gap-1" data-path="rewards" href="#">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+<span class="font-label-sm text-[11px] leading-tight font-medium">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full min-h-[48px] bg-[#D9381E] text-white rounded-xl hover:opacity-90 transition-all gap-1 shadow-sm" data-path="sos" href="#">
+<span class="material-symbols-outlined text-[22px]">emergency</span>
+<span class="font-label-sm text-[11px] leading-tight font-bold">SOS</span>
+</a>
+</div></nav>
+
+
+
+
+
+<script class="">if(window.lucide){lucide.createIcons();}</script>

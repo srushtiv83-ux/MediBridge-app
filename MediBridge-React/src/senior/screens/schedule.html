@@ -1,0 +1,384 @@
+<header class="fixed top-0 w-full z-50 bg-[#F8F9FF]/95 backdrop-blur-xl pt-safe border-b border-[#CBDBF5]/80 shadow-[0_1px_6px_rgba(23,59,103,0.03)]"><div class="h-16 px-5 flex items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-2xl bg-[#173B67]/10 border border-[#CBDBF5] flex items-center justify-center shrink-0 shadow-sm"><span class="material-symbols-outlined text-[#173B67] text-[24px]">pill</span></div><div class="flex flex-col min-w-0"><span class="text-[19px] font-extrabold text-[#0F172A] tracking-tight leading-tight">MediBridge</span><span class="text-xs text-[#173B67] font-semibold">Daily Care &amp; Refills</span></div></div><div class="flex items-center gap-2.5 shrink-0"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F0FDFA] border border-[#CCFBF1] text-[#0D9488] shadow-sm"><span class="w-2 h-2 rounded-full bg-[#0D9488] animate-pulse"></span><span class="text-xs font-bold text-[#0D9488]">Synced</span></div><div class="w-10 h-10 rounded-2xl bg-white border border-[#CBDBF5] flex items-center justify-center text-[#173B67] font-extrabold text-sm shadow-sm" title="Arthur's Profile"><span class="">AJ</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-[#F8F9FF] min-h-screen"><div class="flex flex-col w-full">
+<!-- State 1: Active Medication Schedule Container -->
+<div class="flex flex-col px-5 pt-3 pb-8" id="view-active-schedule"><div class="max-w-lg mx-auto w-full space-y-6 pt-3 pb-12"><div class="space-y-3 px-1"><div class="flex items-center justify-between gap-3 flex-wrap"><div class="flex flex-col gap-0.5"><div class="flex items-center gap-2 text-[#173B67] font-bold text-xs tracking-wider uppercase"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span class="">Wednesday, Oct 24</span></div><h1 class="text-2xl font-extrabold text-[#0F172A] tracking-tight">Today's Schedule</h1><p class="text-sm text-[#475569] font-medium">2 doses taken · 2 remaining</p></div><div class="flex items-center gap-2 shrink-0"><button aria-label="Listen to schedule instructions aloud" class="h-12 px-4 rounded-2xl bg-white border border-[#CBDBF5] hover:bg-[#F8F9FF] active:scale-95 text-[#173B67] font-bold text-sm flex items-center gap-2 shadow-sm transition-all" id="btn-read-aloud"><span class="material-symbols-outlined text-[22px] text-[#173B67]">volume_up</span><span class="">Listen Aloud</span></button></div></div><div class="p-2.5 rounded-2xl bg-white border border-[#CBDBF5] text-[#173B67] text-xs font-semibold flex items-center gap-2 shadow-sm"><span class="material-symbols-outlined text-[#0D9488] text-[18px] shrink-0">verified</span><span class="text-[#173B67]">Synced across Schedule • Inventory Refill Agent • Voice AI Assistant</span></div></div><section class="rounded-3xl p-6 bg-white border border-[#CBDBF5] shadow-[0_4px_20px_rgba(23,59,103,0.06)]"><div class="flex items-center justify-between gap-4 mb-2"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[22px]">pie_chart</span></div><div><h2 class="text-lg font-bold text-[#0F172A]">Daily Progress</h2><p class="text-xs text-[#64748B]">Today's medication completion</p></div></div><span class="text-xs font-bold text-[#0D9488] bg-[#F0FDFA] border border-[#CCFBF1] px-3 py-1 rounded-full">On Track</span></div><div class="flex flex-col sm:flex-row items-center justify-around gap-6 pt-3 pb-2"><div class="relative flex items-center justify-center shrink-0"><svg class="w-32 h-32 transform -rotate-90" viewBox="0 0 120 120"><circle cx="60" cy="60" fill="none" r="48" stroke="#CBDBF5" stroke-width="12"></circle><circle cx="60" cy="60" fill="none" r="48" stroke="#173B67" stroke-dasharray="301.59" stroke-dashoffset="150.8" stroke-linecap="round" stroke-width="12"></circle></svg><div class="absolute flex flex-col items-center justify-center text-center"><span class="text-2xl font-extrabold text-[#0F172A] tracking-tight leading-none">50%</span><span class="text-xs font-bold text-[#173B67] mt-0.5">2 of 4</span><span class="text-[11px] text-[#64748B] font-medium">Doses</span></div></div><div class="flex flex-col gap-2.5 w-full sm:w-auto flex-1"><div class="p-3.5 rounded-2xl bg-[#F0FDFA] border border-[#CCFBF1] flex items-center justify-between shadow-sm"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-lg bg-[#CCFBF1] text-[#0D9488] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">check</span></div><div><span class="text-xs font-bold text-[#0F172A] block">2 Completed</span><span class="text-[11px] text-[#0D9488] font-semibold">Metformin 8:04 AM</span></div></div><span class="material-symbols-outlined text-[#0D9488] text-[20px]">done_all</span></div><div class="p-3.5 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] flex items-center justify-between shadow-sm"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-lg bg-white border border-[#CBDBF5] text-[#173B67] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">schedule</span></div><div><span class="text-xs font-bold text-[#0F172A] block">2 Remaining</span><span class="text-[11px] text-[#475569]">Afternoon &amp; Evening</span></div></div><span class="material-symbols-outlined text-[#173B67] text-[18px]">hourglass_empty</span></div></div></div></section><div class="pt-1"><button aria-label="Add New Medicine" class="w-full h-14 min-h-[56px] rounded-2xl bg-[#173B67] hover:bg-[#122e52] active:scale-[0.99] text-white font-bold text-base flex items-center justify-center gap-2.5 shadow-[0_4px_16px_rgba(23,59,103,0.25)] transition-all" id="btn-open-add-modal"><span class="material-symbols-outlined text-[24px]">add_circle</span><span class="">+ Add New Medicine</span></button></div><div class="pt-2"><h2 class="text-xl font-extrabold text-[#0F172A] tracking-tight px-1">Prescriptions Timeline</h2></div><div class="space-y-4"><div class="flex items-center gap-2 px-1 text-[#64748B]"><span class="material-symbols-outlined text-[20px] text-[#0D9488]">wb_sunny</span><span class="text-xs font-bold uppercase tracking-wider text-[#475569]">Morning • 8:00 AM</span></div><article class="rounded-3xl p-5 bg-white border border-[#CBDBF5] shadow-[0_4px_16px_rgba(23,59,103,0.04)] space-y-3"><div class="flex items-start justify-between gap-3"><div class="flex items-start gap-3.5"><div class="w-12 h-12 rounded-2xl bg-[#F0FDFA] border border-[#CCFBF1] text-[#0D9488] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[26px]">pill</span></div><div><div class="flex items-center gap-2 flex-wrap"><h3 class="text-lg font-bold text-[#0F172A]">Metformin</h3><span class="px-2.5 py-0.5 rounded-lg bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-bold">500 mg</span></div><p class="text-sm text-[#475569] mt-0.5">1 White Oval Tablet with breakfast</p></div></div><span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#F0FDFA] border border-[#CCFBF1] text-[#0D9488] text-xs font-bold shrink-0"><span class="material-symbols-outlined text-[14px]">done</span><span class="">Taken</span></span></div><div class="p-2.5 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-semibold flex items-center gap-2"><span class="material-symbols-outlined text-[#0D9488] text-[18px] shrink-0">verified</span><span class="">Synced across Schedule • Inventory Refill Agent • Voice AI Assistant</span></div></article></div><div class="space-y-4"><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px] text-[#173B67]">light_mode</span><span class="text-xs font-bold uppercase tracking-wider text-[#173B67]">Afternoon • 1:00 PM</span></div><span class="px-3 py-1 rounded-full bg-[#173B67] text-white text-xs font-bold shadow-sm animate-pulse">Due Right Now</span></div><article class="rounded-3xl p-5 bg-white border-2 border-[#173B67]/40 shadow-[0_8px_24px_rgba(23,59,103,0.08)] space-y-4"><div class="flex items-start justify-between gap-3"><div class="flex items-start gap-3.5"><div class="w-12 h-12 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[26px]">medication_liquid</span></div><div><div class="flex items-center gap-2 flex-wrap"><h3 class="text-lg font-bold text-[#0F172A]">Calcium + Vitamin D3</h3><span class="px-2.5 py-0.5 rounded-lg bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-bold">600 mg</span></div><p class="text-sm text-[#475569] mt-0.5 font-medium">Take right after lunch with water</p></div></div><div class="flex items-center gap-1.5 shrink-0"><span class="text-xs font-semibold text-[#475569] bg-[#F8F9FF] border border-[#CBDBF5] px-2.5 py-1 rounded-full">1 Softgel</span><button class="w-8 h-8 rounded-full bg-white hover:bg-[#F8F9FF] text-[#173B67] flex items-center justify-center border border-[#CBDBF5] transition-colors" title="Edit Calcium"><span class="material-symbols-outlined text-[16px]">edit</span></button><button class="w-8 h-8 rounded-full bg-white hover:bg-[#FEF2F2] text-[#D9381E] flex items-center justify-center border border-[#CBDBF5] transition-colors" title="Delete Calcium"><span class="material-symbols-outlined text-[16px]">delete</span></button></div></div><div class="space-y-2.5 pt-1"><button class="w-full h-14 min-h-[56px] rounded-2xl bg-[#173B67] hover:bg-[#122e52] active:scale-[0.99] text-white font-bold text-base flex items-center justify-center gap-2.5 shadow-[0_4px_16px_rgba(23,59,103,0.25)] transition-all" id="btn-trigger-confirm-calcium"><span class="material-symbols-outlined text-[24px]">check_circle</span><span class="">Take Dose Now</span></button><button class="w-full h-12 rounded-2xl bg-[#F8F9FF] hover:bg-white active:scale-[0.99] border border-[#CBDBF5] text-[#173B67] font-bold text-sm flex items-center justify-center gap-2 transition-all" id="btn-snooze-calcium"><span class="material-symbols-outlined text-[18px]">schedule</span><span class="">Remind Me in 15 Minutes</span></button></div></article></div><div class="space-y-4"><div class="flex items-center justify-between px-1 text-[#64748B]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px] text-[#64748B]">nights_stay</span><span class="text-xs font-bold uppercase tracking-wider text-[#475569]">Evening • 6:30 PM</span></div><span class="text-xs font-bold text-[#D9381E] bg-[#FEF2F2] px-2.5 py-0.5 rounded-full border border-[#FECACA]">Attention</span></div><article class="rounded-3xl p-5 bg-white border border-[#CBDBF5] shadow-[0_4px_16px_rgba(23,59,103,0.04)] space-y-3"><div class="flex items-start justify-between gap-3"><div class="flex items-start gap-3.5"><div class="w-12 h-12 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[26px]">cardiology</span></div><div><div class="flex items-center gap-2 flex-wrap"><h3 class="text-lg font-bold text-[#0F172A]">Lisinopril</h3><span class="px-2.5 py-0.5 rounded-lg bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-bold">10 mg</span></div><p class="text-sm text-[#475569] mt-0.5">1 Tablet for Blood Pressure</p></div></div><span class="text-xs font-semibold text-[#64748B] bg-[#F8F9FF] border border-[#CBDBF5] px-2.5 py-1 rounded-full shrink-0">Upcoming</span></div><div class="p-2.5 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-semibold flex items-center gap-2"><span class="material-symbols-outlined text-[#0D9488] text-[18px] shrink-0">verified</span><span class="">Synced across Schedule • Inventory Refill Agent • Voice AI Assistant</span></div></article></div><div class="space-y-4"><div class="flex items-center justify-between px-1 text-[#64748B]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px] text-[#64748B]">bedtime</span><span class="text-xs font-bold uppercase tracking-wider text-[#475569]">Bedtime • 9:00 PM</span></div><span class="text-xs font-semibold text-[#64748B] bg-[#F8F9FF] border border-[#CBDBF5] px-2.5 py-0.5 rounded-full">Upcoming</span></div><article class="rounded-3xl p-5 bg-white border border-[#CBDBF5] shadow-[0_4px_16px_rgba(23,59,103,0.04)] space-y-3"><div class="flex items-start justify-between gap-3"><div class="flex items-start gap-3.5"><div class="w-12 h-12 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#64748B] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[26px]">nightlight_round</span></div><div><div class="flex items-center gap-2 flex-wrap"><h3 class="text-lg font-bold text-[#0F172A]">Atorvastatin</h3><span class="px-2.5 py-0.5 rounded-lg bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-bold">20 mg</span></div><p class="text-sm text-[#475569] mt-0.5">1 Tablet before bedtime</p></div></div><span class="text-xs font-semibold text-[#64748B] bg-[#F8F9FF] border border-[#CBDBF5] px-2.5 py-1 rounded-full shrink-0">Upcoming</span></div><div class="p-2.5 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] text-xs font-semibold flex items-center gap-2"><span class="material-symbols-outlined text-[#0D9488] text-[18px] shrink-0">verified</span><span class="">Synced across Schedule • Inventory Refill Agent • Voice AI Assistant</span></div></article></div></div></div>
+<!-- State 2: Empty State ("All Clear / Relax") -->
+<div class="hidden flex-col items-center text-center px-5 py-12 gap-5" id="view-empty-state">
+<div class="w-24 h-24 rounded-full bg-[#F0FDFA] text-[#0D9488] border border-[#CCFBF1] flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[54px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-1 max-w-sm">
+<h3 class="text-2xl font-bold text-[#0F172A]">All Finished for Today!</h3>
+<p class="text-base text-[#475569]">
+        Wonderful job, Arthur. All 4 prescribed doses were safely confirmed. Daughter Sarah has been sent your daily report.
+      </p>
+</div>
+<div class="p-5 rounded-2xl bg-white border border-[#CBDBF5] shadow-sm w-full max-w-sm flex items-center gap-3 text-left">
+<span class="material-symbols-outlined text-[#173B67] text-[28px]">bed</span>
+<div>
+<p class="text-sm font-bold text-[#0F172A]">Next dose: Tomorrow at 8:00 AM</p>
+<p class="text-xs text-[#64748B]">Metformin 500 mg with breakfast</p>
+</div>
+</div>
+<button class="h-14 px-8 rounded-2xl bg-[#173B67] text-white text-base font-bold shadow-md hover:bg-[#122e52] transition-colors" id="btn-return-active-1">
+      Back to Overview
+    </button>
+</div>
+<!-- State 3: Network / Sync Error State -->
+<div class="hidden flex-col items-center text-center px-5 py-12 gap-5" id="view-error-state">
+<div class="w-20 h-20 rounded-full bg-[#FEF2F2] border border-[#FECACA] text-[#D9381E] flex items-center justify-center">
+<span class="material-symbols-outlined text-[44px]">cloud_off</span>
+</div>
+<div class="flex flex-col gap-1 max-w-sm">
+<h3 class="text-2xl font-bold text-[#0F172A]">Family Hub Disconnected</h3>
+<p class="text-base text-[#475569]">
+        Your local medication reminder times are still saved, but changes cannot sync with Sarah right now.
+      </p>
+</div>
+<div class="w-full max-w-sm flex flex-col gap-2">
+<button class="h-14 w-full rounded-2xl bg-[#173B67] text-white text-base font-bold shadow-md flex items-center justify-center gap-2 hover:bg-[#122e52] transition-colors" id="btn-retry-sync">
+<span class="material-symbols-outlined text-[24px]">refresh</span>
+<span class="">Retry Connection</span>
+</button>
+<button class="h-14 w-full rounded-2xl bg-white border border-[#CBDBF5] text-[#0F172A] text-base font-bold hover:bg-[#F8F9FF] transition-colors" id="btn-return-active-2">
+        Continue Offline
+      </button>
+</div>
+</div>
+<!-- Accessible Confirmation Modal (High Contrast & Clear Senior Copy) -->
+<div class="fixed inset-0 z-50 hidden flex-col items-center justify-end p-5 bg-[#0F172A]/50 backdrop-blur-sm transition-opacity" id="modal-confirm-dose">
+<div class="w-full max-w-md rounded-3xl bg-white border border-[#CBDBF5] p-6 shadow-2xl flex flex-col gap-5 animate-in fade-in slide-in-from-bottom-6 duration-200">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5] text-[#173B67] flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">medication</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-[#F8F9FF] border border-[#CBDBF5] text-[#64748B] flex items-center justify-center" id="btn-modal-close-x">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-extrabold text-[#0F172A]">Take Calcium + Vitamin D3?</h3>
+<p class="text-base text-[#475569]">
+          Please swallow <strong>1 softgel</strong> with a full glass of water. Only confirm once you have swallowed it.
+        </p>
+</div>
+<!-- Verification stamp -->
+<div class="p-3 rounded-xl bg-[#F0FDFA] border border-[#CCFBF1] flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0D9488] text-[22px]">thumb_up</span>
+<span class="text-xs text-[#0D9488] font-bold">Sarah will be notified you took this on time.</span>
+</div>
+<!-- Big modal action buttons -->
+<div class="flex flex-col gap-2.5 pt-1">
+<button class="h-16 w-full rounded-2xl bg-[#0D9488] hover:bg-[#0b7c72] text-white text-lg font-bold shadow-lg flex items-center justify-center gap-3 active:scale-95 transition-transform" id="btn-modal-confirm-yes">
+<span class="material-symbols-outlined text-[30px]">check</span>
+<span class="">Yes, I Swallowed It</span>
+</button>
+<button class="h-14 w-full rounded-2xl bg-[#F8F9FF] text-[#0F172A] border border-[#CBDBF5] text-base font-bold hover:bg-white transition-colors" id="btn-modal-cancel">
+          Cancel (Not Yet)
+        </button>
+</div>
+</div>
+</div><!-- Interactive Add / Edit Medicine Modal Sheet -->
+<div class="fixed inset-0 z-50 hidden flex-col items-center justify-end sm:justify-center p-3 sm:p-6 bg-[#0F172A]/50 backdrop-blur-sm transition-opacity overflow-y-auto" id="modal-add-medicine">
+<div class="w-full max-w-lg rounded-3xl bg-white p-5 sm:p-6 shadow-2xl flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-6 duration-200 border border-[#CBDBF5] max-h-[92vh] overflow-y-auto my-auto">
+<div class="flex items-center justify-between pb-2 border-b border-[#CBDBF5]/60">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-2xl bg-[#F8F9FF] text-[#173B67] flex items-center justify-center shrink-0 border border-[#CBDBF5]">
+<span class="material-symbols-outlined text-[24px]">medication</span>
+</div>
+<div>
+<h3 class="text-xl font-extrabold text-[#0F172A] tracking-tight" id="modal-form-title">Add New Medicine</h3>
+<p class="text-xs text-[#173B67] font-semibold">Caregiver &amp; Patient Verified Prescription Entry</p>
+</div>
+</div>
+<button aria-label="Close dialog" class="w-10 h-10 rounded-full bg-[#F8F9FF] border border-[#CBDBF5] hover:bg-[#CBDBF5]/30 text-[#475569] flex items-center justify-center transition-colors" id="btn-close-add-modal">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-4" id="form-add-medicine">
+<!-- Medicine Name & Dosage -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]" for="med-name">Medicine Name *</label>
+<input class="h-12 px-3.5 rounded-xl border border-[#CBDBF5] focus:border-[#173B67] focus:ring-2 focus:ring-[#CBDBF5] text-sm font-semibold text-[#0F172A] bg-[#F8F9FF] outline-none transition-all" id="med-name" placeholder="e.g. Amlodipine" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]" for="med-dosage">Dosage *</label>
+<input class="h-12 px-3.5 rounded-xl border border-[#CBDBF5] focus:border-[#173B67] focus:ring-2 focus:ring-[#CBDBF5] text-sm font-semibold text-[#0F172A] bg-[#F8F9FF] outline-none transition-all" id="med-dosage" placeholder="e.g. 5 mg or 1 Tablet" required="" type="text">
+</div>
+</div>
+<!-- Frequency -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]">Frequency *</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="group-freq">
+<button class="freq-btn h-11 rounded-xl border-2 border-[#173B67] bg-[#173B67] text-white text-xs font-bold flex items-center justify-center transition-all" data-freq="Once daily" type="button">Once daily</button>
+<button class="freq-btn h-11 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all" data-freq="Twice daily" type="button">Twice daily</button>
+<button class="freq-btn h-11 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all" data-freq="Three times" type="button">Three times</button>
+<button class="freq-btn h-11 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all" data-freq="Custom" type="button">Custom</button>
+</div>
+</div>
+<!-- Medication Times -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]">Medication Times</label>
+<div class="grid grid-cols-2 gap-2" id="group-times">
+<label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#CBDBF5] bg-[#F8F9FF] cursor-pointer hover:bg-white transition-colors text-xs font-semibold text-[#0F172A]">
+<input checked="" class="w-4 h-4 rounded text-[#173B67] focus:ring-[#173B67]" type="checkbox" value="Morning">
+<span class="material-symbols-outlined text-[16px] text-[#0D9488]">wb_sunny</span>
+<span class="">Morning (8:00 AM)</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#CBDBF5] bg-[#F8F9FF] cursor-pointer hover:bg-white transition-colors text-xs font-semibold text-[#0F172A]">
+<input class="w-4 h-4 rounded text-[#173B67] focus:ring-[#173B67]" type="checkbox" value="Afternoon">
+<span class="material-symbols-outlined text-[16px] text-[#173B67]">light_mode</span>
+<span class="">Afternoon (1:00 PM)</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#CBDBF5] bg-[#F8F9FF] cursor-pointer hover:bg-white transition-colors text-xs font-semibold text-[#0F172A]">
+<input class="w-4 h-4 rounded text-[#173B67] focus:ring-[#173B67]" type="checkbox" value="Evening">
+<span class="material-symbols-outlined text-[16px] text-[#475569]">nights_stay</span>
+<span class="">Evening (6:30 PM)</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#CBDBF5] bg-[#F8F9FF] cursor-pointer hover:bg-white transition-colors text-xs font-semibold text-[#0F172A]">
+<input class="w-4 h-4 rounded text-[#173B67] focus:ring-[#173B67]" type="checkbox" value="Bedtime">
+<span class="material-symbols-outlined text-[16px] text-[#64748B]">bedtime</span>
+<span class="">Bedtime (9:00 PM)</span>
+</label>
+</div>
+</div>
+<!-- Start & End Date -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]" for="med-start-date">Start Date</label>
+<div class="relative flex items-center">
+<input class="h-12 w-full pl-10 pr-3 rounded-xl border border-[#CBDBF5] focus:border-[#173B67] text-sm font-semibold text-[#0F172A] bg-[#F8F9FF] outline-none" id="med-start-date" type="text" value="Oct 25, 2024">
+<span class="material-symbols-outlined absolute left-3 text-[#64748B] text-[18px]">calendar_today</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]" for="med-end-date">End Date</label>
+<div class="relative flex items-center">
+<input class="h-12 w-full pl-10 pr-3 rounded-xl border border-[#CBDBF5] focus:border-[#173B67] text-sm font-semibold text-[#0F172A] bg-[#F8F9FF] outline-none" id="med-end-date" type="text" value="Ongoing 90 days">
+<span class="material-symbols-outlined absolute left-3 text-[#64748B] text-[18px]">event_repeat</span>
+</div>
+</div>
+</div>
+<!-- Inventory Stock Fields -->
+<div class="grid grid-cols-2 gap-3 p-3.5 rounded-2xl bg-[#F8F9FF] border border-[#CBDBF5]">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]" for="med-stock-total">Total Stock</label>
+<div class="flex items-center gap-2">
+<input class="h-11 w-full px-3 rounded-xl border border-[#CBDBF5] focus:border-[#173B67] text-sm font-bold text-center text-[#0F172A] bg-white outline-none" id="med-stock-total" min="1" type="number" value="60">
+<span class="text-xs font-semibold text-[#64748B] shrink-0">tabs</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]" for="med-stock-remaining">Current Remaining</label>
+<div class="flex items-center gap-2">
+<input class="h-11 w-full px-3 rounded-xl border border-[#CBDBF5] focus:border-[#173B67] text-sm font-bold text-center text-[#0F172A] bg-white outline-none" id="med-stock-remaining" min="0" type="number" value="60">
+<span class="text-xs font-semibold text-[#64748B] shrink-0">tabs</span>
+</div>
+</div>
+</div>
+<!-- Instructions Options -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-[#475569]">Instructions</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="group-instructions">
+<button class="inst-btn h-10 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all" data-inst="Before food" type="button">Before food</button>
+<button class="inst-btn h-10 rounded-xl border-2 border-[#173B67] bg-[#173B67] text-white text-xs font-bold flex items-center justify-center transition-all" data-inst="With food" type="button">With food</button>
+<button class="inst-btn h-10 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all" data-inst="After food" type="button">After food</button>
+<button class="inst-btn h-10 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all" data-inst="Other" type="button">Other</button>
+</div>
+</div>
+<!-- Mandatory Safety Verification Notice -->
+<div class="p-3.5 rounded-2xl bg-[#FEF2F2] border border-[#FECACA] text-[#0F172A] text-xs leading-relaxed flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#D9381E] text-[20px] shrink-0 mt-0.5">warning</span>
+<p class=""><strong class="font-bold text-[#D9381E]">Verification Safeguard:</strong> Manually entered medications require explicit patient or authorized caregiver review before activation. MediBridge never automatically activates unverified doses.</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-2.5 pt-2">
+<button class="flex-1 h-14 min-h-[52px] rounded-2xl bg-[#173B67] hover:bg-[#122e52] active:scale-98 text-white font-bold text-base flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(23,59,103,0.25)] transition-all" id="btn-save-medicine" type="submit">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span class="">Save Medicine</span>
+</button>
+<button class="h-14 min-h-[52px] px-6 rounded-2xl bg-[#F8F9FF] hover:bg-white text-[#475569] font-bold text-sm border border-[#CBDBF5] transition-colors" id="btn-cancel-add-modal" type="button">
+          Cancel
+        </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Delete Confirmation Modal Dialog -->
+<div class="fixed inset-0 z-50 hidden flex-col items-center justify-center p-4 bg-[#0F172A]/50 backdrop-blur-sm transition-opacity" id="modal-delete-medicine">
+<div class="w-full max-w-sm rounded-3xl bg-white p-6 shadow-2xl flex flex-col gap-4 border border-[#FECACA] text-center animate-in fade-in duration-200">
+<div class="w-14 h-14 rounded-2xl bg-[#FEF2F2] text-[#D9381E] flex items-center justify-center mx-auto border border-[#FECACA]">
+<span class="material-symbols-outlined text-[30px]">delete_forever</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-extrabold text-[#0F172A]">Delete Prescription?</h3>
+<p class="text-sm text-[#475569] leading-relaxed" id="delete-modal-msg">Are you sure you want to remove this medicine? Sarah will be notified immediately.</p>
+</div>
+<div class="p-3 rounded-xl bg-[#F8F9FF] border border-[#CBDBF5] text-xs text-[#475569] text-left flex items-center gap-2">
+<span class="material-symbols-outlined text-[#173B67] text-[18px]">info</span>
+<span class="">Schedule and Refill Agent counts will be updated.</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="h-12 w-full rounded-2xl bg-[#D9381E] hover:bg-[#ba2e17] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm transition-all" id="btn-confirm-delete" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+<span class="">Confirm Delete</span>
+</button>
+<button class="h-12 w-full rounded-2xl bg-[#F8F9FF] hover:bg-white text-[#475569] font-bold text-sm border border-[#CBDBF5] transition-colors" id="btn-cancel-delete" type="button">
+        Cancel
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Add / Edit Medicine Modal script helpers
+  const addModal = document.getElementById('modal-add-medicine');
+  const deleteModal = document.getElementById('modal-delete-medicine');
+  const btnOpenAdd = document.getElementById('btn-open-add-modal');
+  const btnCloseAdd = document.getElementById('btn-close-add-modal');
+  const btnCancelAdd = document.getElementById('btn-cancel-add-modal');
+  const btnCancelDelete = document.getElementById('btn-cancel-delete');
+  const btnConfirmDelete = document.getElementById('btn-confirm-delete');
+  let pendingDeleteTarget = '';
+
+  function openAddMedicineModal() {
+    document.getElementById('modal-form-title').innerText = 'Add New Medicine';
+    document.getElementById('form-add-medicine').reset();
+    document.getElementById('med-start-date').value = 'Oct 25, 2024';
+    document.getElementById('med-end-date').value = 'Ongoing 90 days';
+    document.getElementById('med-stock-total').value = '60';
+    document.getElementById('med-stock-remaining').value = '60';
+    addModal.classList.remove('hidden');
+    addModal.classList.add('flex');
+  }
+
+  function closeAddMedicineModal() {
+    addModal.classList.add('hidden');
+    addModal.classList.remove('flex');
+  }
+
+  btnOpenAdd?.addEventListener('click', openAddMedicineModal);
+  btnCloseAdd?.addEventListener('click', closeAddMedicineModal);
+  btnCancelAdd?.addEventListener('click', closeAddMedicineModal);
+
+  // Frequency selector pill toggles
+  document.querySelectorAll('.freq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.freq-btn').forEach(b => {
+        b.className = 'freq-btn h-11 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all';
+      });
+      btn.className = 'freq-btn h-11 rounded-xl border-2 border-[#173B67] bg-[#173B67] text-white text-xs font-bold flex items-center justify-center transition-all';
+    });
+  });
+
+  // Instruction pills toggle
+  document.querySelectorAll('.inst-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.inst-btn').forEach(b => {
+        b.className = 'inst-btn h-10 rounded-xl border border-[#CBDBF5] bg-white hover:bg-[#F8F9FF] text-[#475569] text-xs font-semibold flex items-center justify-center transition-all';
+      });
+      btn.className = 'inst-btn h-10 rounded-xl border-2 border-[#173B67] bg-[#173B67] text-white text-xs font-bold flex items-center justify-center transition-all';
+    });
+  });
+
+  // Pre-fill Edit Modal
+  window.openEditMedicineModal = function(name, dosage, freq, time, total, remaining, inst) {
+    document.getElementById('modal-form-title').innerText = 'Edit Medicine: ' + name;
+    document.getElementById('med-name').value = name;
+    document.getElementById('med-dosage').value = dosage;
+    document.getElementById('med-stock-total').value = total;
+    document.getElementById('med-stock-remaining').value = remaining;
+    addModal.classList.remove('hidden');
+    addModal.classList.add('flex');
+  };
+
+  // Delete Modal logic
+  window.openDeleteModal = function(name) {
+    pendingDeleteTarget = name;
+    document.getElementById('delete-modal-msg').innerText = 'Are you sure you want to remove ' + name + '? Sarah will be notified immediately.';
+    deleteModal.classList.remove('hidden');
+    deleteModal.classList.add('flex');
+  };
+
+  btnCancelDelete?.addEventListener('click', () => {
+    deleteModal.classList.add('hidden');
+    deleteModal.classList.remove('flex');
+  });
+
+  btnConfirmDelete?.addEventListener('click', () => {
+    deleteModal.classList.add('hidden');
+    deleteModal.classList.remove('flex');
+    alert(pendingDeleteTarget + ' removed. Caregiver Sarah and Refill agent updated.');
+  });
+
+  window.submitMedicineForm = function() {
+    const name = document.getElementById('med-name').value;
+    closeAddMedicineModal();
+    alert('Medicine "' + name + '" saved successfully and synced with Sarah!');
+  };
+</script>
+</div>
+<script>
+  // Simple view tab switcher for state previews
+  const viewActive = document.getElementById('view-active-schedule');
+  const viewEmpty = document.getElementById('view-empty-state');
+  const viewError = document.getElementById('view-error-state');
+
+  function setViewState(state) {
+    viewActive.classList.add('hidden');
+    viewEmpty.classList.add('hidden');
+    viewError.classList.add('hidden');
+
+    if (state === 'active') {
+      viewActive.classList.remove('hidden');
+    } else if (state === 'empty') {
+      viewEmpty.classList.remove('hidden');
+    } else if (state === 'error') {
+      viewError.classList.remove('hidden');
+    }
+  }
+
+  document.getElementById('btn-return-active-1')?.addEventListener('click', () => setViewState('active'));
+  document.getElementById('btn-return-active-2')?.addEventListener('click', () => setViewState('active'));
+  document.getElementById('btn-retry-sync')?.addEventListener('click', () => {
+    alert('Connecting to Family Hub... Synced successfully!');
+    setViewState('active');
+  });
+
+  // Dose Confirmation Modal logic
+  const modal = document.getElementById('modal-confirm-dose');
+  const btnTrigger = document.getElementById('btn-trigger-confirm-calcium');
+  const btnCancel = document.getElementById('btn-modal-cancel');
+  const btnCloseX = document.getElementById('btn-modal-close-x');
+  const btnConfirmYes = document.getElementById('btn-modal-confirm-yes');
+  const audioBtn = document.getElementById('btn-read-aloud');
+
+  btnTrigger?.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  });
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  btnCancel?.addEventListener('click', closeModal);
+  btnCloseX?.addEventListener('click', closeModal);
+
+  btnConfirmYes?.addEventListener('click', () => {
+    closeModal();
+    // Simulate updating UI
+    btnTrigger.innerHTML = '<span class="material-symbols-outlined text-[24px]">check</span><span>Confirmed Taken!</span>';
+    btnTrigger.className = 'h-14 w-full rounded-2xl bg-[#0D9488] text-white font-bold text-base flex items-center justify-center gap-2 cursor-default';
+  });
+
+  // Listen Aloud Toast preview
+  audioBtn?.addEventListener('click', () => {
+    alert('Speaking schedule aloud: You have taken Metformin at 8:00 AM. Next dose is Calcium plus Vitamin D3, due right now.');
+  });
+
+  // Snooze simulation
+  document.getElementById('btn-snooze-calcium')?.addEventListener('click', () => {
+    alert('Reminder set for 1:15 PM. You will hear a gentle chime.');
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-white/95 backdrop-blur-xl border-t border-[#CBDBF5] shadow-[0_-2px_12px_rgba(23,59,103,0.04)]"><div class="grid grid-cols-6 items-center h-18 px-1.5 max-w-lg mx-auto py-1 gap-1"><a class="flex flex-col items-center justify-center min-h-[48px] py-1 text-[#64748B] hover:text-[#0F172A] transition-colors rounded-xl" data-path="home" href="#"><span class="material-symbols-outlined text-[22px] shrink-0">home</span><span class="text-[11px] font-semibold tracking-tight mt-0.5">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-h-[48px] py-1 bg-[#173B67]/10 text-[#173B67] rounded-xl font-bold transition-colors" data-path="meds" href="#"><span class="material-symbols-outlined text-[22px] shrink-0">medication</span><span class="text-[11px] font-extrabold tracking-tight mt-0.5">Meds</span></a><a class="flex flex-col items-center justify-center min-h-[48px] py-1 text-[#64748B] hover:text-[#0F172A] transition-colors rounded-xl" data-path="care-circle" href="#"><span class="material-symbols-outlined text-[22px] shrink-0">group</span><span class="text-[11px] font-semibold tracking-tight mt-0.5 text-center leading-tight">Care Circle</span></a><a class="flex flex-col items-center justify-center min-h-[48px] py-1 text-[#64748B] hover:text-[#0F172A] transition-colors rounded-xl" data-path="visits" href="#"><span class="material-symbols-outlined text-[22px] shrink-0">calendar_month</span><span class="text-[11px] font-semibold tracking-tight mt-0.5">Visits</span></a><a class="flex flex-col items-center justify-center min-h-[48px] py-1 text-[#64748B] hover:text-[#0F172A] transition-colors rounded-xl" data-path="rewards" href="#"><span class="material-symbols-outlined text-[22px] shrink-0">verified</span><span class="text-[11px] font-semibold tracking-tight mt-0.5">Rewards</span></a><a class="flex flex-col items-center justify-center min-h-[48px] py-1 bg-[#D9381E] text-white hover:bg-[#ba2e17] rounded-xl transition-colors shadow-sm" data-path="sos" href="#"><span class="material-symbols-outlined text-[22px] shrink-0">emergency</span><span class="text-[11px] font-extrabold tracking-tight mt-0.5">SOS</span></a></div></nav>
